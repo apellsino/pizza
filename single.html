@@ -86,7 +86,7 @@
 			</div>
 			<div class="col-md-3 header-right"> 
 				<div class="search-bar">
-					<input type="text" value="Поиск" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+					<input type="text" value="Поиск" name='pizza_name' onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
 					<input type="submit" value="">
 				</div>
 			</div>
@@ -158,7 +158,10 @@
 							
 							<h5 class="item_price">105</h5>
 							<p>Описание пиццы</p>
-							<a href="#" class="add-cart item_add">ДОБАВИТЬ В КОРЗИНУ</a>
+							<form action="php/checkout.php" method="POST">
+								<input type="submit" value="ДОБАВИТЬ В КОРЗИНУ" name="submit" class="add-cart item_add">
+								<input type="hidden" name="id" value="1">
+							</form>
 							
 						</div>
 					</div>

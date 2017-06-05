@@ -28,7 +28,7 @@
 			<div class="top-header-main">
 				<div class="col-md-6 top-header-left">
 					<div class="cart box_1">
-						<a href="checkout.html">
+						<a href="php/checkout.php">
 							<div class="total">
 								<span class="simpleCart_total"></span></div>
 								<img src="images/cart-1.png" alt="" />
@@ -106,13 +106,13 @@
 						</div>
 					</div>
 					<div class="col-md-9 contact-right">
-						<form>
-							<input type="text" placeholder="Имя">
-							<input type="text" placeholder="Телефон">
-							<input type="text"  placeholder="Email">
-							<textarea placeholder="Сообщение" required=""></textarea>
+						<form action="php/contact.php">
+							<input type="text" placeholder="Имя" name="name">
+							<input type="text" placeholder="Телефон" name="phone">
+							<input type="text"  placeholder="Email" name="email">
+							<textarea placeholder="Сообщение" required="" name="message"></textarea>
 							<div class="submit-btn">
-								<input type="submit" value="ОТПРАВИТЬ">
+								<input type="submit" value="ОТПРАВИТЬ" name="contact">
 							</div>
 						</form>
 					</div>

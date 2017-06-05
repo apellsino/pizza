@@ -19,7 +19,8 @@
 <script type="text/javascript" src="js/memenu.js"></script>
 <script>$(document).ready(function(){$(".memenu").memenu();});</script>	
 <!--dropdown-->
-<script src="js/jquery.easydropdown.js"></script>			
+<script src="js/jquery.easydropdown.js"></script>
+
 </head>
 <body> 
 	<!--top-header-->
@@ -28,7 +29,7 @@
 			<div class="top-header-main">
 				<div class="col-md-6 top-header-left">
 					<div class="cart box_1">
-						<a href="checkout.html">
+						<a href="php/checkout.php">
 							 <div class="total">
 								<span class="simpleCart_total"></span></div>
 								<img src="images/cart-1.png" alt="" />
@@ -64,9 +65,9 @@
 			</div>
 			<div class="col-md-3 header-right"> 
 				<div class="search-bar">
-					<form action="" method="GET">
-						<input type="text" value="Поиск" name="query" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-						<input type="submit" value="">
+					<form action="search.php" method="post">
+						<input type="text" value="Поиск пиццы" name='pizza_name' autocomplete="off" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+						<input type="submit" value="" name="submit">
 					</form>
 					<div id="search_advice_wrapper"></div>
 				</div>
@@ -125,8 +126,8 @@
 					<figure class="effect-bubba">
 						<img class="img-responsive" src="images/abt-1.jpg" alt=""/>
 						<figcaption>
-							<h2>Пиццочка1</h2>
-							<p>Самая вкуснейшая</p>
+							<h4></h4>
+							<p>Пицца - это итальянское национальное блюдо в виде круглой открытой лепешки, покрытой в классическом варианте томатами и расплавленным сыром.</p>
 						</figcaption>			
 					</figure>
 				</div>
@@ -134,8 +135,8 @@
 					<figure class="effect-bubba">
 						<img class="img-responsive" src="images/abt-2.jpg" alt=""/>
 						<figcaption>
-							<h4>Пиццочка2</h4>
-							<p>Все очень вкусные</p>
+							<h4></h4>
+							<p>Классическое тесто для пиццы делается из специальной муки (смесь муки durum), натуральных дрожжей (закваски), оливкового масла, соли и воды. </p>
 						</figcaption>			
 					</figure>
 				</div>
@@ -143,8 +144,8 @@
 					<figure class="effect-bubba">
 						<img class="img-responsive" src="images/abt-3.jpg" alt=""/>
 						<figcaption>
-							<h4>Пиццуля3</h4>
-							<p>Съешь её</p>
+							<h4></h4>
+							<p>Пицца — любимая еда Черепашек-ниндзя, персонажей аниме Code Geass, Блум из Винкс и др.</p>
 						</figcaption>			
 					</figure>
 				</div>
@@ -160,53 +161,49 @@
 				<div class="product-one">
 					<div class="col-md-3 product-left">
 						<div class="product-main simpleCart_shelfItem">
-							<a href="single.html" class="mask"><img class="img-responsive zoom-img" src="images/p-1.png" alt="" /></a>
+							<a href="single1.html" class="mask"><img class="img-responsive zoom-img" src="images/pr-1.jpg" alt="" /></a>
 							<div class="product-bottom">
-								<h3>Маргарита</h3>
+								<h3>маринара</h3>
 								<p>Подробнее</p>
 								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">109</span></h4>
 							</div>
 							<div class="srch">
-								<span>-50%</span>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-3 product-left">
 						<div class="product-main simpleCart_shelfItem">
-							<a href="single.html" class="mask"><img class="img-responsive zoom-img" src="images/p-2.png" alt="" /></a>
+							<a href="single2.html" class="mask"><img class="img-responsive zoom-img" src="images/pr-2.jpg" alt="" /></a>
 							<div class="product-bottom">
-								<h3>Реджина</h3>
-								<p>Подробнее</p>
-								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">65</span></h4>
-							</div>
-							<div class="srch">
-								<span>-50%</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 product-left">
-						<div class="product-main simpleCart_shelfItem">
-							<a href="single.html" class="mask"><img class="img-responsive zoom-img" src="images/p-3.png"  alt="" /></a>
-							<div class="product-bottom">
-								<h3>Капричоза</h3>
+								<h3>квинта филона</h3>
 								<p>Подробнее</p>
 								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">99</span></h4>
 							</div>
 							<div class="srch">
-								<span>-50%</span>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-3 product-left">
 						<div class="product-main simpleCart_shelfItem">
-							<a href="single.html" class="mask"><img class="img-responsive zoom-img" src="images/p-4.png" alt="" /></a>
+							<a href="single3.html" class="mask"><img class="img-responsive zoom-img" src="images/pr-3.jpg"  alt="" /></a>
 							<div class="product-bottom">
-								<h3>Маринара</h3>
+								<h3>грибная</h3>
 								<p>Подробнее</p>
-								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">105</span></h4>
+								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">119</span></h4>
 							</div>
 							<div class="srch">
-								<span>-50%</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 product-left">
+						<div class="product-main simpleCart_shelfItem">
+							<a href="single4.html" class="mask"><img class="img-responsive zoom-img" src="images/pr-4.jpg" alt="" /></a>
+							<div class="product-bottom">
+								<h3>итальяни</h3>
+								<p>Подробнее</p>
+								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">140</span></h4>
+							</div>
+							<div class="srch">
 							</div>
 						</div>
 					</div>
@@ -215,56 +212,103 @@
 				<div class="product-one">
 					<div class="col-md-3 product-left">
 						<div class="product-main simpleCart_shelfItem">
-							<a href="single.html" class="mask"><img class="img-responsive zoom-img" src="images/p-5.png" alt="" /></a>
+							<a href="single5.html" class="mask"><img class="img-responsive zoom-img" src="images/pr-5.jpg" alt="" /></a>
 							<div class="product-bottom">
-								<h3>Вегетарианская</h3>
+								<h3>монако</h3>
 								<p>Подробнее</p>
-								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">90</span></h4>
+								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">169</span></h4>
 							</div>
 							<div class="srch">
-								<span>-50%</span>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-3 product-left">
 						<div class="product-main simpleCart_shelfItem">
-							<a href="single.html" class="mask"><img class="img-responsive zoom-img" src="images/p-6.png" alt="" /></a>
+							<a href="single6.html" class="mask"><img class="img-responsive zoom-img" src="images/pr-6.jpg" alt="" /></a>
 							<div class="product-bottom">
-								<h3>Ещё пицца</h3>
+								<h3>вегетарианская</h3>
 								<p>Подробнее</p>
-								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">89</span></h4>
+								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">109</span></h4>
 							</div>
 							<div class="srch">
-								<span>-50%</span>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-3 product-left">
 						<div class="product-main simpleCart_shelfItem">
-							<a href="single.html" class="mask"><img class="img-responsive zoom-img" src="images/p-7.png" alt="" /></a>
+							<a href="single7.html" class="mask"><img class="img-responsive zoom-img" src="images/pr-7.jpg" alt="" /></a>
 							<div class="product-bottom">
-								<h3>Ещё пицца2</h3>
+								<h3>маргарита</h3>
 								<p>Подробнее</p>
-								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">60</span></h4>
+								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">69</span></h4>
 							</div>
 							<div class="srch">
-								<span>-50%</span>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-3 product-left">
 						<div class="product-main simpleCart_shelfItem">
-							<a href="single.html" class="mask"><img class="img-responsive zoom-img" src="images/p-8.png" alt="" /></a>
+							<a href="single8.html" class="mask"><img class="img-responsive zoom-img" src="images/pr-8.jpg" alt="" /></a>
 							<div class="product-bottom">
-								<h3>Ещё пицца3</h3>
+								<h3>капричоза</h3>
 								<p>подробнее</p>
-								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">70</span></h4>
+								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">105</span></h4>
 							</div>
 							<div class="srch">
-								<span>-50%</span>
 							</div>
 						</div>
 					</div>
+				</div>
+				<div class="product-one">
+					<div class="col-md-3 product-left">
+						<div class="product-main simpleCart_shelfItem">
+							<a href="single9.html" class="mask"><img class="img-responsive zoom-img" src="images/pr-9.jpg" alt="" /></a>
+							<div class="product-bottom">
+								<h3>реджина</h3>
+								<p>подробнее</p>
+								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">99</span></h4>
+							</div>
+							<div class="srch">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 product-left">
+						<div class="product-main simpleCart_shelfItem">
+							<a href="single10.html" class="mask"><img class="img-responsive zoom-img" src="images/pr-10.jpg" alt="" /></a>
+							<div class="product-bottom">
+								<h3>неаполитана</h3>
+								<p>подробнее</p>
+								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">99</span></h4>
+							</div>
+							<div class="srch">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 product-left">
+						<div class="product-main simpleCart_shelfItem">
+							<a href="single11.html" class="mask"><img class="img-responsive zoom-img" src="images/pr-11.jpg" alt="" /></a>
+							<div class="product-bottom">
+								<h3>пепперони</h3>
+								<p>подробнее</p>
+								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">99</span></h4>
+							</div>
+							<div class="srch">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 product-left">
+						<div class="product-main simpleCart_shelfItem">
+							<a href="single12.html" class="mask"><img class="img-responsive zoom-img" src="images/pr-12.jpg" alt="" /></a>
+							<div class="product-bottom">
+								<h3>сырная</h3>
+								<p>подробнее</p>
+								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">109</span></h4>
+							</div>
+							<div class="srch">
+							</div>
+						</div>
+					</div>
+				</div>
 					<div class="clearfix"></div>
 				</div>					
 			</div>
@@ -280,21 +324,6 @@
 					<ul>
 						<li><a href="#"><span class="fb"></span><h6>Facebook</h6></a></li>
 						<li><a href="#"><span class="google"></span><h6>Instagram</h6></a></li>
-					</ul>
-				</div>
-				<div class="col-md-3 infor-left">
-					<h3>Дополнительная информация</h3>
-					<ul>
-						<li><a href="#"><p>Наши рестораны</p></a></li>
-						<li><a href="contact.html"><p>Свяжитесь с нами</p></a></li>
-					</ul>
-				</div>
-				<div class="col-md-3 infor-left">
-					<h3>Мой аккаунт</h3>
-					<ul>
-						<li><a href="account.html"><p>Мой аккаунт</p></a></li>
-						<li><a href="#"><p>Персональная информация</p></a></li>
-						<li><a href="#"><p>Мои адреса</p></a></li>
 					</ul>
 				</div>
 				<div class="col-md-3 infor-left">

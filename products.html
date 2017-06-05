@@ -28,7 +28,7 @@
 			<div class="top-header-main">
 				<div class="col-md-6 top-header-left">
 					<div class="cart box_1">
-						<a href="checkout.html">
+						<a href="php/checkout.php">
 							<div class="total">
 								<span class="simpleCart_total"></span></div>
 								<img src="images/cart-1.png" alt="" />
@@ -64,8 +64,10 @@
 			</div>
 			<div class="col-md-3 header-right"> 
 				<div class="search-bar">
-					<input type="text" value="Поиск" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-					<input type="submit" value="">
+					<form action="search.php" method="post">
+						<input type="text" value="Поиск пиццы" name='pizza_name' onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+						<input type="submit" value="" name="submit">
+					</form>
 				</div>
 			</div>
 			<div class="clearfix"> </div>

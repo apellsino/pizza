@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PizzaYOLO</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!--jQuery(necessary for Bootstrap's JavaScript plugins)-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <!--Custom-Theme-files-->
+    <!--theme-style-->
+    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Превью" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--start-menu-->
+    <script src="../js/simpleCart.min.js"> </script>
+    <link href="../css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="../js/memenu.js"></script>
+    <script>$(document).ready(function(){$(".memenu").memenu();});</script>
+    <!--dropdown-->
+    <script src="../js/jquery.easydropdown.js"></script>
+</head>
+<body>
+<!--top-header-->
+<div class="top-header">
+    <div class="container">
+        <div class="top-header-main">
+            <div class="col-md-6 top-header-left">
+                <div class="cart box_1">
+                    <a href="../php/checkout.php">
+                        <div class="total">
+                            <span class="simpleCart_total"></span></div>
+                        <img src="../images/cart-1.png" alt="" />
+                    </a>
+                    <p><a href="javascript:;" class="simpleCart_empty">Корзина</a></p>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--top-header-->
+<!--start-logo-->
+<div class="logo">
+    <a href="../index.html"><h1>PizzaYOLO</h1></a>
+</div>
+<!--start-logo-->
+<!--bottom-header-->
+<div class="header-bottom">
+    <div class="container">
+        <div class="header">
+            <div class="col-md-9 header-left">
+                <div class="top-nav">
+                    <ul class="memenu skyblue"><li class="active"><a href="../index.html">Главная</a></li>
+                        <li class="grid"><a href="../typo.html">О нас</a>
+                        </li>
+                        <li class="grid"><a href="../contact.html">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-3 header-right">
+                <div class="search-bar">
+                    <form action="../search.php" method="post">
+                        <input type="text" value="Поиск пиццы" name='pizza_name' onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+                        <input type="submit" value="" name="submit">
+                    </form>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!--bottom-header-->
+<!--start-breadcrumbs-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs-main">
+            <ol class="breadcrumb">
+                <li><a href="../index.html">Главная</a></li>
+                <li class="active">Заказ</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!--end-breadcrumbs-->
+<!--start-ckeckout-->
+<div class="ckeckout">
+    <div class="container">
+        <div class="ckeck-top heading">
+            <h2>ЗАКАЗ</h2>
+        </div>
+        <div class="ckeckout-top">
+            <div class="cart-items">
+                <h3>Корзина</h3>
+                <script>$(document).ready(function(c) {
+                        $('.close1').on('click', function(c){
+                            $('.cart-header').fadeOut('slow', function(c){
+                                $('.cart-header').remove();
+                            });
+                        });
+                    });
+                </script>
+                <script>$(document).ready(function(c) {
+                        $('.close2').on('click', function(c){
+                            $('.cart-header1').fadeOut('slow', function(c){
+                                $('.cart-header1').remove();
+                            });
+                        });
+                    });
+                </script>
+                <script>$(document).ready(function(c) {
+                        $('.close3').on('click', function(c){
+                            $('.cart-header2').fadeOut('slow', function(c){
+                                $('.cart-header2').remove();
+                            });
+                        });
+                    });
+                </script>
+
+                <div class="in-check" >
+                    <ul class="unit">
+                        <li><span></span></li>
+                        <li><span>Название</span></li>
+                        <li><span>Цена</span></li>
+                        <li><span>Детали</span></li>
+                        <li> </li>
+                        <div class="clearfix"> </div>
+                    </ul>
+
+                    <?php include "zakaz.php"; ?>
+
+                    <ul class=" cart-header1">
+                        <div class="close2"> </div>
+                        <li class="ring-in"><a href="../single5.html" ><img src="../images/pr-5.jpg" class="img-responsive" alt=""></a>
+                        </li>
+                        <li><span class="name">монако</span></li>
+                        <li><span class="cost">169</span></li>
+                        <li><span>Вес: 0.55 кг</span>
+                            <p>Ингредиенты: соус тартар, икра красная, лосось, моцарелла, лимон</p></li>
+                        <div class="clearfix"> </div>
+                    </ul>
+
+                    <ul class=" cart-header2">
+                        <div class="close3"> </div>
+                        <li class="ring-in"><a href="../single11.html" ><img src="../images/pr-11.jpg" class="img-responsive" alt=""></a>
+                        </li>
+                        <li><span class="name">пепперони</span></li>
+                        <li><span class="cost">109</span></li>
+                        <li><span>Вес: 0.56 кг</span>
+                            <p>Ингредиенты: соус томатный, салями, помидоры черри, моцарелла, пармезан, орегано</p></li>
+                        <div class="clearfix"> </div>
+                    </ul>
+
+
+                    <ul class=" cart-header3" >
+                        <li class="ring-in"></li>
+                        <li><span class="name"></span></li>
+                        <li><span class="cost1"><h4 align="center">Total: <span class="simpleCart_total"></span></h4></span></li>
+                        <li></li>
+                            <div class="clearfix"> </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end-ckeckout-->
+<!--information-starts-->
+<div class="information">
+    <div class="container">
+        <div class="infor-top">
+            <div class="col-md-3 infor-left">
+                <h3>Мы в соцсетях</h3>
+                <ul>
+                    <li><a href="#"><span class="fb"></span><h6>Facebook</h6></a></li>
+                    <li><a href="#"><span class="google"></span><h6>Instagram</h6></a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 infor-left">
+
+            </div>
+            <div class="col-md-3 infor-left">
+
+            </div>
+            <div class="col-md-3 infor-left">
+                <h3>О ресторане</h3>
+                <h4>PizzaYOLO
+                    <span>Самый заботливый сервис доставки пиццы в Харькове</span>
+                    Харьков, ул. Сумская, 24</h4>
+                <h5>+38 096 996 33 90</h5>
+                <p><a href="mailto:pizzaYOLO@gmail.com">pizzaYOLO@gmail.com</a></p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--information-end-->
+<!--footer-starts-->
+<div class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="col-md-6 footer-left">
+                <form>
+                    <input type="text" value="Введите Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Your Email';}">
+                    <input type="submit" value="Подписаться">
+                </form>
+            </div>
+            <div class="col-md-6 footer-right">
+                <p><a href="http://w3layouts.com/" target="_blank">W</a> </p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--footer-end-->
+</body>
+</html>
